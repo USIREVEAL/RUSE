@@ -1,18 +1,25 @@
-# About RUSE
+<h1 align="center">RUSE
+<hr>A participatory art experience</h1>
 
-RUSE, a web application which aggregates all the data and presents them, with an intuitive visualization, to the artist who can influence in real-time the sound synthesis and compositional processes.
+<div align="center">
 
-# Live Service & Video
+[//]: # (  <img src="./assets/RUSE-Logo.png" alt="RUSE Logo" width="70px" height="70px"/>)
+  <br>
+  <i><b>RUSE is a participatory art experience that transforms an electronic music concert into a creative and democratic process in which the audience is invested with an active role. During a live music performance, the audience can use their smartphones or computers to express their opinions about what they are hearing. The musician then can adapt their performance by observing their feedback in real time on a dedicated screen.</b></i>
+</div>
 
-Live service at [RUSE homepage](https://ruse.si.usi.ch).
-
-A video about RUSE available on Youtube at [RUSE video](https://youtu.be/NFbFRS4MNag).
+<hr>
+<div align="center">
+  <img src="./assets/RUSE-Studio.png" alt="angular-logo" width="1600px"/>
+  <i>RUSE in practice during a studio session: the RUSE application opened on smartphones and laptops (right) and the musician performing while observing the real-time audience aggregate feedback (left).</i>
+</div>
+<hr>
 
 # How to run
 
 ## ruse-frontend
 
-Install all dependencies.
+Install the dependencies as follows:
 
 ```
 cd ruse-frontend
@@ -27,7 +34,7 @@ yarn start
 
 ## ruse-backend
 
-Install all dependencies.
+Install the dependencies as follows:
 
 ```
 cd ../ruse-backend
@@ -40,11 +47,11 @@ Run the `backend` locally using node with default port `5234`.
 node server
 ```
 
-# Docker images
+# Docker
 
 ## Prerequisites
 
-- Docker installed on the machine
+- Docker installed on the machine. To install Docker, follow the [official documentation](https://docs.docker.com/).
 
 ## Build and tag docker images
 
@@ -73,3 +80,9 @@ docker compose up
 ```
 
 Now, open [RUSE](http://localhost:3000) in browser.
+
+# Pre-deployed version & Video Teaser
+
+A pre-deployed version of RUSE is available [here](https://ruse.si.usi.ch). 
+
+On [YouTube](https://youtu.be/NFbFRS4MNag) you can view a short teaser of RUSE in action at [ARS Electronica Lugano Garden 2021](https://www.usi.ch/en/feeds/16676).
