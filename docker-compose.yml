@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  ruse_backend:
+    container_name: ruse_backend
+    restart: always
+    image: ruse-backend:staging
+    ports:
+      - "5234:5234"
+  ruse_frontend:
+    container_name: ruse_frontend
+    restart: always
+    image: ruse-frontend:staging
+    tty: true
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_BACKEND_HOSTNAME=ruse_backend
+    links:
+      - ruse_backend
+    depends_on:
+      - ruse_backend
