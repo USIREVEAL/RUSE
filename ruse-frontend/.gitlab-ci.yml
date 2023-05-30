@@ -1,0 +1,34 @@
+image: node
+
+stages:
+  - deploy
+
+docker-build:
+  only: [master]
+  stage: deploy
+  image: docker
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - docker:dind
+  tags: [dind]
+  before_script:
+    - docker login gitlab.reveal.si.usi.ch:60090 -p $DOCKER_PSW
+  script:
+    - docker build -t gitlab.reveal.si.usi.ch:60090/students/2021/andrea-brites-marto/ruse-frontend:latest .
+    - docker push gitlab.reveal.si.usi.ch:60090/students/2021/andrea-brites-marto/ruse-frontend:latest
+
+# docker-build-tags:
+#   only: [tags]
+#   stage: deploy
+#   image: docker
+#   variables:
+#     DOCKER_DRIVER: overlay2
+#   services:
+#     - docker:dind
+#   tags: [dind]
+#   before_script:
+#     - docker login gitlab.reveal.si.usi.ch:60090 -p $DOCKER_PSW
+#   script:
+#     - docker build ./ -t gitlab.reveal.si.usi.ch:60090/students/2021/andrea-brites-marto/ruse-frontend:$CI_COMMIT_REF_NAME
+#     - docker push gitlab.reveal.si.usi.ch:60090/students/2021/andrea-brites-marto/ruse-frontend:$CI_COMMIT_REF_NAME

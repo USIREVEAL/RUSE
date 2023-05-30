@@ -1,0 +1,23 @@
+{
+    "first_h": "Premier Hexagone",
+    "second_h": "Deuxième Hexagone",
+    "customize": "Personnaliser",
+    "high-pitch": "Aigu",
+    "low-pitch": "Grave",
+    "bright timbre": "Timbre clair",
+    "dark timbre": "Timbre sombre",
+    "consonance": "Consonance",
+    "dissonance": "Dissonance",
+    "regular": "Regulier",
+    "chaotic": "Chaotique",
+    "slow": "Lent",
+    "fast": "Rapide",
+    "monodic": "Monotonique",
+    "polyphony": "Polyphonique",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "first": "Premier",
+    "second": "Duexième",
+    "monophony": "Monophonie"
+}

@@ -1,0 +1,217 @@
+
+
+body {
+  margin: 20px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: #1a1a1d!important;
+  color: #e53358!important;
+}
+
+.footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top:20px;
+  align-items: center;
+}
+
+.lastElFooter > * {
+  margin: 5px 0;
+}
+
+.footerLogos {
+  display:flex;
+  flex-direction: row;
+}
+
+.footerLogos > * {
+  margin: 0 30px
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.mainFrame {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#dataBars {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#dataBars > div {
+  padding: 0 20px;
+}
+
+#homeBox {
+  /* border: 1px solid #4e4e50; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  padding: 50px;
+  max-width:600px;
+}
+
+.homeInternBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.buttonGroup {
+  justify-content: 'space-evenly'
+}
+
+.activated {
+  background-color: '#c3073f' ;
+}
+
+/* .pathAnim {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash 5s linear alternate infinite, svg-shadow 1.5s linear infinite alternate;
+} */
+
+.css-selector {
+  background: linear-gradient(180deg, #ffffff, #1a1a1d);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 6s ease ;
+  -moz-animation: AnimationName 6s ease ;
+  animation: AnimationName 6s ease ;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  100%{background-position:50% 100%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  100%{background-position:50% 100%}
+}
+@keyframes AnimationName {
+  0%{background-position:50% 0%}
+  100%{background-position:50% 100%}
+}
+
+/* Main styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n+1) {
+  stroke: #f2385a;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n+2) {
+  stroke: #f5a503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n+3) {
+  stroke: #f868cd;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n+4) {
+  stroke: #b04fff;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n+5) {
+  stroke: #3aa1bf;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+/* MEDIA SCREENS */
+
+@media screen and (max-width: 668px) {
+
+  #homeBox {
+    flex-direction: column;
+    border: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .homeInternBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    margin:20px;
+  }
+
+  .footerLogos {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  #dataBars {
+    flex-direction: column;
+  }
+  
+  #dataBars > div {
+    padding: 0;
+  }
+}
+
+/* KEYFRAME ANIMATIONS */
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes svg-shadow {
+  from {
+    stroke:#5bf1f1;
+  }
+
+  to {
+    stroke:rgb(241, 114, 235);
+  }
+}
